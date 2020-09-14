@@ -1,0 +1,14 @@
+.nav {
+  grid-area: n;
+  background-color: rgb(153, 247, 14);
+}
+
+.item a {
+    color: rgb(126, 122, 122);
+    text-decoration: none;
+}
+
+.item a:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}

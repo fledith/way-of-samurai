@@ -10,20 +10,7 @@
   /* grid-gap: 10px; */
 }
 
-.header {
-  grid-area: h;
-  background-color: greenyellow;
-}
-.header img {
-  width: 100px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: rgb(153, 247, 14);
-}
-
-.content {
+.app-wrapper-content {
   grid-area: c;
   background-color: rgb(47, 189, 255);
 }
