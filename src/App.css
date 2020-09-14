@@ -1,10 +1,17 @@
+html {
+  background-color: #dee5ec;
+  min-height: 90%;
+}
+
 .app-wrapper {
   margin: 0 auto;
   display: grid;
   width: 1200px;
+  font-family: sans-serif;
   grid-template-areas: 
   "h h"
-  "n c";
+  "n c"
+  "f f";
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   /* grid-gap: 10px; */
@@ -12,5 +19,10 @@
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: rgb(47, 189, 255);
+  background-color: #fff;
+  border-radius: 0 0 3px 3px;
+  border-left: 1px solid #dee5ec;
+  border-right: 1px solid #dee5ec;
+  border-bottom: 1px solid #d0dae2;
+  padding: 15px;
 }

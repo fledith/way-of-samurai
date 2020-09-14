@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './../../img/logo.jpg';
+import logo from './../../img/logo.png';
 import z from './Header.module.css';
 
 
 const Header = () => {
     return (
         <header className={z.header}>
-            <img src={logo} alt='logo'/>
+            <a href="#s">
+                <img src={logo} alt='logo'/>
+            </a>
         </header>
     );
 }

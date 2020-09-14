@@ -1,7 +1,14 @@
 .header {
   grid-area: h;
-  background-color: greenyellow;
+  background-color: #5785a8;
+  border-radius: 0 0 3px 3px;
+  border-left: 1px solid #dee5ec;
+  border-right: 1px solid #dee5ec;
 }
+
 .header img {
-  width: 100px;
+  padding: 10px;
+  padding-left: 30px;
+  width: 40px;
+  background-color: #5785a8;
 }
