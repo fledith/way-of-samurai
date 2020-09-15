@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './../../img/logo.png';
+import { NavLink } from 'react-router-dom';
+import logo from './../../img/logo_new.png';
 import z from './Header.module.css';
 
 
 const Header = () => {
     return (
         <header className={z.header}>
-            <a href="#s">
+            <NavLink to="/profile">
                 <img src={logo} alt='logo'/>
-            </a>
+            </NavLink>
         </header>
     );
 }
