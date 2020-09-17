@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import Contact from './components/Contact/Contact';
 import Dialogs from './components/Dialogs/Dialogs';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
@@ -18,8 +19,9 @@ const App = (props) => {
             <Header />
             <Navbar />
             <div className="app-wrapper-content">
-                <Route path="/profile" render={() => <Profile posts={props.posts} />} />
-                <Route path="/dialogs" render={() => <Dialogs dialogs={props.dialogs} messages={props.messages} />} />
+                <Route path="/profile" render={() => <Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />} />
+                <Route path="/contact" render={() => <Contact />} />
+                <Route path="/dialogs" render={() => <Dialogs dialogsPage={props.state.dialogsPage} dispatch={props.dispatch} />} />
                 <Route path="/news" render={() => <News />} />
                 <Route path="/music" render={() => <Music />} />
                 <Route path="/settings" render={() => <Settings />} />

@@ -5,20 +5,27 @@
   border-left: 1px solid #dee5ec;
   border-right: 1px solid #dee5ec;
   border-bottom: 1px solid #d0dae2;
-  padding: 20px;
 }
 
 .item {
-  background-color: #fff;
+  margin: auto;
+  padding: 18px 30px;
+  border-bottom: 1px solid #d0dae2;
+  max-height: 50px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-.item a {
-  background-color: #fff;
-  color: #000;
+/* .item img {
+  padding: 0 40px 0 10px;
+} */
+
+.item:hover {
+  background-color: #eff4f8;
   text-decoration: none;
 }
 
-.item a.active {
-  color: gold;
+a {
+  color: #000;
+  text-decoration: none;
 }
-
