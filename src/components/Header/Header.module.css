@@ -6,17 +6,17 @@
 }
 
 .header img {
-  padding: 20px 38px;
+  padding: 20px 60px;
   width: 120px;
 }
 
 .logo {
-  width: 200px;
+  width: 252px;
   background-color: #6094bb;
 }
 
 .logo:hover {
-  width: 200px;
+  width: 252px;
   cursor: pointer;
   background-color: #488abd;
 }
