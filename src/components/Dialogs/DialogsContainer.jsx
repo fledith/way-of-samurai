@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateNewDialogMessageActionCreator, sendMessageActionCreator } from '../../redux/dialogsReducer';
+import { updateNewDialogMessageAC, sendMessageAC } from '../../redux/dialogsReducer';
 import Dialogs from './Dialogs';
 
 
@@ -13,10 +13,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         sendMessage: () => {
-            dispatch(sendMessageActionCreator());
+            dispatch(sendMessageAC());
         },
         updateNewDialogMessage: (text) => {
-            let action = updateNewDialogMessageActionCreator(text);
+            let action = updateNewDialogMessageAC(text);
             dispatch(action);
         }
     }
