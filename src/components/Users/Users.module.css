@@ -1,4 +1,11 @@
 .avatar {
-    width: 100px;
-    border-radius: 30px;
-  }
+  width: 100px;
+}
+
+.selectedPage {
+  font-weight: bold;
+}
+
+.notSelectedPage:hover {
+  cursor: pointer;
+}
