@@ -1,0 +1,31 @@
+.content {
+    padding: 30px;
+    margin: 0 auto;
+    display: grid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-template-areas: "d p";
+    grid-template-columns: 8fr 4fr;
+    /* grid-gap: 10px; */
+}
+
+.description {
+    grid-area: d;
+}
+
+.nickname {
+   font-size: 16px;
+}
+
+.status {
+    color: #acaaaa;
+    border-bottom: silver;
+    font-size: 10px;
+}
+
+.info {
+    margin-top: 22px;
+}
+
+.profile {
+    grid-area: p;
+}

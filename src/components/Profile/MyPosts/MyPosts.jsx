@@ -17,7 +17,7 @@ const MyPosts = (props) => {
     }
 
     return (
-        <div>
+        <div className={z.wall}>
             <h3>My post</h3>
             <div>
                 <div>
