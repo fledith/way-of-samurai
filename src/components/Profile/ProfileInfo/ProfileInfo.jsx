@@ -1,27 +1,40 @@
 import React from 'react';
 import z from './ProfileInfo.module.css';
 import avatar from './../../../img/avatar.jpg';
+import Preloader from '../../common/Preloader/Preloader';
 
 
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+    
+    if (!props.profile) {
+        return <Preloader />
+    }
+    
     return (
         <div className={z.content}>
             <div className={z.description}>
                 <div className={z.nickname}>
-                    Gendalf
+                    {props.profile.fullName}
                 </div>
                 <div className={z.status}>
-                    Who cares? I'm fabulous...
+                    {props.profile.aboutMe}
                 </div>
                 <div className={z.info}>
-                    Age: 23 y.o. <br/>
-                    Location: Zhytomyr, Ukraine <br/>
-                    ... <br/>
+                    Contact:
+                    {props.profile.contacts.facebook && <span>{" " + props.profile.contacts.facebook},</span>}
+                    {props.profile.contacts.website && <span>{" " + props.profile.contacts.website},</span>}
+                    {props.profile.contacts.vk && <span>{" " + props.profile.contacts.vk},</span>}
+                    {props.profile.contacts.twitter && <span>{" " + props.profile.contacts.twitter},</span>}
+                    {props.profile.contacts.instagram && <span>{" " + props.profile.contacts.instagram},</span>}   
+                    {props.profile.contacts.youtube && <span>{" " + props.profile.contacts.youtube},</span>}   
+                    {props.profile.contacts.github && <span>{" " + props.profile.contacts.github},</span>}   
+                    {props.profile.contacts.mainLink && <span>{" " + props.profile.contacts.maimLink},</span>}
+                    {props.profile.lookingForAJob && <span><br/>{"lookingForAJob: " + props.profile.lookingForAJobDescription}</span>}   
                 </div>
             </div>
             <div className={z.profile}>
-                <img src={avatar} className={z.avatar} />
+                <img src={props.profile.photos.large} className={z.avatar} />
             </div>
         </div>
     );
