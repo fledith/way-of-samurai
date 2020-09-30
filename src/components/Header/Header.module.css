@@ -11,6 +11,7 @@
 }
 
 .logo {
+  float: left;
   width: 252px;
   background-color: #6094bb;
 }
@@ -21,3 +22,12 @@
   background-color: #488abd;
 }
 
+.loginBlock {
+  float: right;
+  padding: 20px 30px;
+  color: white;
+}
+
+.loginBlock a {
+  color: white;
+}
