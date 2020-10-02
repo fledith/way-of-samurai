@@ -9,8 +9,13 @@ const Header = (props) => {
         <header className={z.header}>
             <div className={z.logo}>
                 <NavLink to="/profile">
-                    <img src={logo} alt='logo'/>
+                    <center>
+                        <img src={logo} alt='logo'/>
+                    </center>
                 </NavLink>
+            </div>
+            <div className={z.center}>
+
             </div>
             <div className={z.loginBlock}>
                 { props.isAuth ? props.login
