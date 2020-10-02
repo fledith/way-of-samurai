@@ -2,7 +2,6 @@ import React from 'react';
 import z from './Users.module.css';
 import avatar from '../../img/avatar2.png'
 import { NavLink } from 'react-router-dom';
-import { userAPI } from '../../api/api';
 
 
 let Users = (props) => {
@@ -19,24 +18,12 @@ let Users = (props) => {
                     </div>
                     <div>
                         {u.followed 
-                        ? <button disabled={props.isFollowing.some(id => id === u.id)} onClick={() => {
-                            props.toggleIsFollowing(true, u.id);
-                            userAPI.unfollow(u.id).then(data => {
-                                if(data.resultCode == 0) {
-                                    props.follow(u.id);
-                                }
-                                props.toggleIsFollowing(false, u.id);
-                            });
-                        }}>Unfollow</button> 
-                        : <button disabled={props.isFollowing.some(id => id === u.id)} onClick={() => {
-                            props.toggleIsFollowing(true, u.id);
-                            userAPI.follow(u.id).then(data => {
-                                if(data.resultCode == 0) {
-                                    props.follow(u.id);
-                                }
-                                props.toggleIsFollowing(false, u.id);
-                            });
-                        }}>Follow</button>}
+                        ? <button disabled={props.isFollowing.some(id => id === u.id)} 
+                                  onClick={() => props.unfollow(u.id)
+                        }>Unfollow</button> 
+                        : <button disabled={props.isFollowing.some(id => id === u.id)} 
+                                  onClick={() => props.follow(u.id)
+                        }>Follow</button>}
                     </div>
                 </span>
                 <span>

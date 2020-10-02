@@ -17,21 +17,18 @@ export const userAPI = {
             });
     },
     getProfile(userId) {
-        return instance.get(`profile/` + userId)
-            .then(response => {
-                return response.data;
-            });
+        return instance.get(`profile/` + userId);
     },
     follow(userId) {
         return instance.post(`follow/${userId}`)
-            .then(response => {
-                return response.data;
-            })
     },
     unfollow(userId) {
         return instance.delete(`follow/${userId}`)
-            .then(response => {
-                return response.data;
-            })
-    }
+    },
+}
+
+export const authAPI = {
+    me() {
+        return instance.get(`auth/me`);
+    },
 }

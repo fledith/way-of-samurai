@@ -1,6 +1,6 @@
 import React from 'react';
 import z from './ProfileInfo.module.css';
-import avatar from './../../../img/avatar.jpg';
+import avatar2 from './../../../img/avatar2.png';
 import Preloader from '../../common/Preloader/Preloader';
 
 
@@ -34,7 +34,9 @@ const ProfileInfo = (props) => {
                 </div>
             </div>
             <div className={z.profile}>
-                <img src={props.profile.photos.large} className={z.avatar} />
+                {!props.profile.photos.large 
+                ? <img src={avatar2} className={z.avatar} />
+                : <img src={props.profile.photos.large} className={z.avatar} />}
             </div>
         </div>
     );
