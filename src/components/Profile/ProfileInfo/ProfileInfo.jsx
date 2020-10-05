@@ -2,6 +2,7 @@ import React from 'react';
 import z from './ProfileInfo.module.css';
 import avatar2 from './../../../img/avatar2.png';
 import Preloader from '../../common/Preloader/Preloader';
+import ProfileStatus from './ProfileStatus';
 
 
 
@@ -18,7 +19,7 @@ const ProfileInfo = (props) => {
                     {props.profile.fullName}
                 </div>
                 <div className={z.status}>
-                    {props.profile.aboutMe}
+                    <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus} />
                 </div>
                 <div className={z.info}>
                     Contact:
@@ -31,6 +32,7 @@ const ProfileInfo = (props) => {
                     {props.profile.contacts.github && <span>{" " + props.profile.contacts.github},</span>}   
                     {props.profile.contacts.mainLink && <span>{" " + props.profile.contacts.maimLink},</span>}
                     {props.profile.lookingForAJob && <span><br/>{"lookingForAJob: " + props.profile.lookingForAJobDescription}</span>}   
+                    {props.profile.aboutMe && <span><br/>{"About Me: " + props.profile.aboutMe}</span>}
                 </div>
             </div>
             <div className={z.profile}>
