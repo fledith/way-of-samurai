@@ -10,7 +10,7 @@ import News from './components/News/News';
 import ProfileContainer from './components/Profile/ProfileContainer';
 import Settings from './components/Settings/Settings';
 import HeaderContainer from './components/Header/HeaderContainer';
-import Login from './components/Login/login';
+import Login from './components/Login/Login';
 
 
 const App = () => {  
