@@ -3,7 +3,7 @@
   background-color: #6094bb;
   border-radius: 0 0 3px 3px;
   display: grid;
-  grid-template-columns: 3fr 7fr 2fr;
+  grid-template-columns: 3fr 6fr 3fr;
   grid-template-areas: "lg c lB";
 }
 
@@ -30,8 +30,14 @@
 
 .loginBlock {
   grid-area: lB;
+  text-align: right;
   padding: 20px 30px;
   color: white;
+}
+
+.loginBlock input{
+  vertical-align: top;
+  width: 22px;
 }
 
 .loginBlock a {

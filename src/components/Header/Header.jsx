@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from './../../img/logo_new2.png';
 import z from './Header.module.css';
+import logout from '../../img/logout.png';
 
 
 const Header = (props) => {
@@ -18,7 +19,8 @@ const Header = (props) => {
 
             </div>
             <div className={z.loginBlock}>
-                { props.isAuth ? props.login
+                { props.isAuth 
+                    ? <>{props.login} <input type="image" src={logout} onClick={props.logout} /></>
                     : <NavLink to={'/login'}> Login </NavLink>}
             </div>
         </header>
