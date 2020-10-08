@@ -2,20 +2,16 @@ import React from 'react';
 import DialogItem from './DialogItem/DialogItem';
 import z from './Dialogs.module.css';
 import Message from './Message/Message';
-
+import AddMessageFormRedux from './AddMessageForm'
 
 const Dialogs = (props) => {
 
     let dialogsElements = props.state.dialogs.map( d => <DialogItem name={d.name} key={d.id} id={d.id} />);
     let messagesElements = props.state.messages.map( m => <Message message={m.message} key={m.id} id={m.id} />);
 
-    let onAddMessage = () => {
-        props.sendMessage()
+    let addNewMessage = (value) => {
+        props.sendMessage(value.newMessageBody);
     } 
-    let onDialogChange = (e) => {
-        let text = e.target.value;
-        props.updateNewDialogMessage(text);
-    }
 
     return (
         <div className={z.dialogs}>
@@ -24,12 +20,7 @@ const Dialogs = (props) => {
             </div>
             <div className={z.messages}>
                 { messagesElements }
-                <div>
-                    <textarea onChange={onDialogChange} value={props.state.newDialogMessage} placeholder="Write a message..." />
-                </div>
-                <div>
-                    <button onClick={onAddMessage}>Send</button>
-                </div>
+                <AddMessageFormRedux onSubmit={ addNewMessage } />
             </div>
         </div>
     )

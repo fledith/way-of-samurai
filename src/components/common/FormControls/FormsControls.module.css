@@ -1,0 +1,20 @@
+
+
+.formControl.error input,
+.formControl.error textarea
+{
+    border: solid rgb(235, 25, 25) 1px;
+}
+
+.formControl.error span
+{
+    color: rgb(235, 25, 25);
+    margin: 0;
+}
+
+.formControl.error span img
+{
+    width: 16px;
+    vertical-align: top;
+    padding: 1px 5px ;
+}
