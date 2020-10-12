@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
 import { login } from '../../redux/authReducer';
-import { minLengthCreator, required } from '../../utils/validators/validators';
+import { required } from '../../utils/validators/validators';
 import FormControl from '../common/FormControls/FormsControls';
 import z from './Login.module.css';
+import f from '../common/FormControls/FormsControls.module.css';
 
 
-const minLength4 = minLengthCreator(4);
 const Input = FormControl("input");
 
 const LoginForm = (props) => {
@@ -18,11 +18,15 @@ const LoginForm = (props) => {
                 <Field placeholder={"Login"} name={"email"} component={Input} validate={[required]} />
             </div>
             <div className={z.fieldItem}>
-                <Field placeholder={"Password"} name={"password"} component={Input} type={"password"} validate={[required, minLength4]} />
+                <Field placeholder={"Password"} name={"password"} component={Input} type={"password"} validate={[required]} />
             </div>
             <div className={z.fieldItem}>
                 <Field component={"input"} name={"rememberMe"} type={"checkbox"}  /> remember me
             </div>
+            {props.error && 
+            <div className={f.formSummaryError}>
+                {props.error}
+            </div>}
             <div>
                 <button>Login</button>
             </div>

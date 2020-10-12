@@ -18,3 +18,10 @@
     vertical-align: top;
     padding: 1px 5px ;
 }
+
+.formSummaryError {
+    border: red 1px solid;
+    padding: 5px;
+    color: red;
+    max-width: 200px;
+}

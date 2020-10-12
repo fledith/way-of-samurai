@@ -1,7 +1,7 @@
 import React from 'react';
 import z from './ProfileInfo.module.css';
 import avatar2 from './../../../img/avatar2.png';
-import Preloader from '../../common/Preloader/Preloader';
+import { Preloader } from '../../common/Preloader/Preloader';
 import ProfileStatus from './ProfileStatus';
 
 

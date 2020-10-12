@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { follow, unfollow, getUsers, toggleIsFollowing } from '../../redux/usersReducer';
 import Users from './Users';
 import NumberPage from './NumberPage';
-import Preloader from '../common/Preloader/Preloader';
+import { Preloader } from '../common/Preloader/Preloader';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
 import { compose } from 'redux';
 
@@ -49,5 +49,5 @@ const mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps, {follow, unfollow, toggleIsFollowing, getUsers}),
-    withAuthRedirect
+    //withAuthRedirect
 )(UsersContainer);
