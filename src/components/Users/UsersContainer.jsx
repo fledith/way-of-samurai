@@ -47,14 +47,14 @@ class UsersContainer extends React.Component {
 //     }
 // }
 const mapStateToProps = (state) => {
-    return{
+    return ({
         users: getUsers(state),
         pageSize: getPageSize(state),
         totalUsersCount: getTotalUsersCount(state),
         currentPage: getCurrentPage(state),
         isFetching: getIsFetching(state),
         isFollowing: getIsFollowing(state),    
-    }
+    })
 }
 
 export default compose(

@@ -20,7 +20,7 @@ const Header = (props) => {
             </div>
             <div className={z.loginBlock}>
                 { props.isAuth 
-                    ? <>{props.login} <input type="image" src={logout} onClick={props.logout} /></>
+                    ? <>{props.login} <input type="image" title="log out" src={logout} onClick={props.logout} /></>
                     : <><Redirect to={"/login"} /><NavLink to={'/login'}> Login </NavLink></>}
             </div>
         </header>
