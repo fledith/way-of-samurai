@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { initializedApp } from './redux/appReducer';
 import {Route, withRouter} from 'react-router-dom';
 import './App.css';
 import UsersContainer from './components/Users/UsersContainer';
@@ -11,9 +14,6 @@ import ProfileContainer from './components/Profile/ProfileContainer';
 import Settings from './components/Settings/Settings';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from './components/Login/Login';
-import { initializedApp } from './redux/appReducer';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
 import { PrePreloader} from './components/common/Preloader/Preloader';
 
 
