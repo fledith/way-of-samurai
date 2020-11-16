@@ -3,8 +3,8 @@
   background-color: #6094bb;
   border-radius: 0 0 3px 3px;
   display: grid;
-  grid-template-columns: 3fr 6fr 3fr;
-  grid-template-areas: "lg c lB";
+  grid-template-columns: 3fr 9fr;
+  grid-template-areas: "lg lB";
 }
 
 .header img {
@@ -16,6 +16,7 @@
 .logo {
   grid-area: lg;
   min-width: 137px;
+  max-height: 60px;
   background-color: #6094bb;
 }
 
@@ -24,14 +25,11 @@
   cursor: pointer;
   background-color: #488abd;
 }
-.center {
-  grid-area: c;
-}
 
 .loginBlock {
   grid-area: lB;
   text-align: right;
-  padding: 20px 30px;
+  padding: 20px;
   color: white;
 }
 

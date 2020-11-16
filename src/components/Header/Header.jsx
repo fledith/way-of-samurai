@@ -15,9 +15,6 @@ const Header = (props) => {
                     </center>
                 </NavLink>
             </div>
-            <div className={z.center}>
-
-            </div>
             <div className={z.loginBlock}>
                 { props.isAuth 
                     ? <>{props.login} <input type="image" title="log out" src={logout} onClick={props.logout} /></>

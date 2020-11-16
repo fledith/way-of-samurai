@@ -1,10 +1,10 @@
 .content {
-    padding: 30px;
+    padding: 20px;
     margin: 0 auto;
     display: grid;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     grid-template-areas: "d p";
-    grid-template-columns: 8fr 4fr;
+    grid-template-columns: 7fr 5fr;
     /* grid-gap: 10px; */
 }
 
@@ -24,15 +24,18 @@
 }
 
 .info {
-    font-size: 16px;
-    margin-top: 22px;
+    font-size: 14px;
+    margin-top: 16px;
     margin-right: 10px;
 }
 
 .profile {
     grid-area: p;
+    max-width: 200px;
+    min-width: 80px;
 }
 
-.avatar {
-    max-width: 200px;
+.profile img {
+    float: right;
+    width: 100%;
 }

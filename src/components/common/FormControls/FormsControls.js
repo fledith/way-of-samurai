@@ -10,7 +10,7 @@ const FormControl = Element => ({input, meta, ...props}) => {
             <Element {...props} {...input} />
  
             { 
-            hasError && <span><img src={warn} />{meta.error}</span>
+            hasError && <span><img src={warn} alt="warn" />{meta.error}</span>
             }
         </div>
     )

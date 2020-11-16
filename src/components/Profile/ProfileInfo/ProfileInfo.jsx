@@ -37,8 +37,8 @@ const ProfileInfo = (props) => {
             </div>
             <div className={z.profile}>
                 {!props.profile.photos.large 
-                ? <img src={avatar2} className={z.avatar} />
-                : <img src={props.profile.photos.large} className={z.avatar} />}
+                ? <img src={avatar2} />
+                : <img src={props.profile.photos.large} />}
             </div>
         </div>
     );
