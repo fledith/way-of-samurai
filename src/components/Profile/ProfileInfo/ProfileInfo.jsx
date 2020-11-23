@@ -14,6 +14,11 @@ const ProfileInfo = (props) => {
     
     return (
         <div className={z.content}>
+            <div className={z.profile}>
+                {!props.profile.photos.large 
+                ? <img src={avatar2} />
+                : <img src={props.profile.photos.large} />}
+            </div>
             <div className={z.description}>
                 <div className={z.nickname}>
                     {props.profile.fullName}
@@ -34,11 +39,6 @@ const ProfileInfo = (props) => {
                     {props.profile.lookingForAJob && <span><br/>{"lookingForAJob: " + props.profile.lookingForAJobDescription}</span>}   
                     {props.profile.aboutMe && <span><br/>{"About Me: " + props.profile.aboutMe}</span>}
                 </div>
-            </div>
-            <div className={z.profile}>
-                {!props.profile.photos.large 
-                ? <img src={avatar2} />
-                : <img src={props.profile.photos.large} />}
             </div>
         </div>
     );
